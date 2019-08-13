@@ -27,8 +27,8 @@ input_file_name=$(basename $input_file)
 input_file_name=${input_file_name%.*}
 output_file=${input_file_name}.split.pdf
 
-# set working dir
-cd $(dirname $0)
+# set working dir at the same dir with input_file
+cd $(dirname $input_file)
 # make working dir
 mkdir -p ${input_file_name}/split && mkdir -p ${input_file_name}/cropped
 
